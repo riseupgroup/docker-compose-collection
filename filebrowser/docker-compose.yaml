@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  filebrowser:
+    image: "filebrowser/filebrowser"
+    volumes:
+      - filebrowser_data:/data # this contains only the database
+      - ${FILEBROWSER_SRV_LOCATION}:/srv # this contains the actual data
+    command: "--port 80 --database /data/database.db --root /srv"
+
+volumes:
+  filebrowser_data:
