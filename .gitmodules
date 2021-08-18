@@ -1,3 +1,6 @@
 [submodule "ExtrOs"]
 	path = ExtrOs
 	url = https://github.com/ransbachm/ExtrOs
+[submodule "mysql_env"]
+	path = mysql_env
+	url = https://github.com/ransbachm/mysql_env
