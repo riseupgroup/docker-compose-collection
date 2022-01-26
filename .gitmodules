@@ -4,3 +4,6 @@
 [submodule "mysql_env"]
 	path = mysql_env
 	url = https://github.com/ransbachm/mysql_env
+[submodule "docker-ookla-speedtest-server"]
+	path = docker-ookla-speedtest-server
+	url = https://github.com/Comet1903/docker-ookla-speedtest-server
