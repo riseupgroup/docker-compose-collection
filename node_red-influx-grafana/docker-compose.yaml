@@ -1,0 +1,38 @@
+# not my compose, thx for the config tho :)
+
+version: "3.8"
+
+services:
+  node-red:
+    image: nodered/node-red:latest
+    ports:
+      - "50025:1880"
+    networks:
+      - data-stuff
+    volumes:
+      - node-red-data:/data
+  influxDB:
+    image: influxdb:latest
+    ports:
+      - "50026:8086"
+    networks:
+      - data-stuff
+    volumes:
+      - influxdb-data:/var/lib/influxdb2:rw
+  grafana:
+    image: grafana/grafana
+    ports: 
+      - "50027:3000"
+    networks:
+      - data-stuff
+    volumes:
+      - grafana-data:/var/lib/grafana:rw
+
+volumes:
+  node-red-data:
+  influxdb-data:
+  grafana-data:
+
+
+networks:
+  data-stuff:
